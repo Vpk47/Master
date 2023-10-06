@@ -152,7 +152,7 @@
                 About Us
               </h2>
               <p>
-                At Vpk Digital Art, we are passionate about the limitless world of digital art.
+                At Vpk Digital Art Company, we are passionate about the limitless world of digital art.
               </p>
               <a href="about.php">
                 Read More 
