@@ -43,21 +43,23 @@
               </div>
               <div id="myNav" class="overlay">
                 <div class="overlay-content">
-                  <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="" href="about.html">About </a>
-                  <a class="" href="gallery.html">Gallery </a>
-                  <a class="" href="blog.html">Blog </a>
-                  <a class="" href="testimonial.html">Testimonial </a>
+                  <a class="" href="index.php">Home <span class="sr-only">(current)</span></a>
+                  <a class="" href="login.php">Login </a>
+                  <a class="" href="about.php">About </a>
+                  <a class="" href="gallery.php">Gallery </a>
+                  <a class="" href="blog.php">Blog </a>
+                  <a class="" href="testimonial.php">Testimonial </a>
+                  <a class="" href="calc.php">Solar Calculator</a>
                 </div>
               </div>
             </div>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
               <span>
                 Vpk Digital Art
               </span>
             </a>
             <div class="user_option">
-              <a href="#">
+              <a href="login.php">
                 login
               </a>
               <form class="form-inline ">
@@ -152,7 +154,7 @@
               <p>
                 At Vpk Digital Art, we are passionate about the limitless world of digital art.
               </p>
-              <a href="about.html">
+              <a href="about.php">
                 Read More 
               </a>
             </div>
@@ -184,7 +186,7 @@
             <p>
               It is a long established fact that a reader will be distracted by the readable content of a page
             </p>
-            <a href="gallery.html">
+            <a href="gallery.php">
               See More
             </a>
           </div>
@@ -261,7 +263,7 @@
               <p>
                 It is a long established fact that a reader will be distracted by the readable content of a page
               </p>
-              <a href="">
+              <a href="blog.php">
                 Read More
               </a>
             </div>
@@ -485,19 +487,19 @@
               <div class="info_link-box">
                 <ul>
                   <li class=" ">
-                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="about.html">About </a>
+                    <a class="" href="about.php">About </a>
                   </li>
                   <li class="">
-                    <a class="" href="gallery.html">Gallery </a>
+                    <a class="" href="gallery.php">Gallery </a>
                   </li>
                   <li class="">
-                    <a class="" href="blog.html">Blog </a>
+                    <a class="" href="blog.php">Blog </a>
                   </li>
                   <li class="">
-                    <a class="" href="testimonial.html">Testimonial </a>
+                    <a class="" href="testimonial.php">Testimonial </a>
                   </li>
                 </ul>
               </div>

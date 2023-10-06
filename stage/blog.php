@@ -43,15 +43,15 @@
               </div>
               <div id="myNav" class="overlay">
                 <div class="overlay-content">
-                  <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  <a class="" href="about.html">About </a>
-                  <a class="" href="gallery.html">Gallery </a>
-                  <a class="" href="blog.html">Blog </a>
-                  <a class="" href="testimonial.html">Testimonial </a>
+                  <a class="" href="index.php">Home <span class="sr-only">(current)</span></a>
+                  <a class="" href="about.php">About </a>
+                  <a class="" href="gallery.php">Gallery </a>
+                  <a class="" href="blog.php">Blog </a>
+                  <a class="" href="testimonial.php">Testimonial </a>
                 </div>
               </div>
             </div>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
               <span>
                 Vpk Digital Art
               </span>
@@ -87,7 +87,7 @@
                 <p>
                   Blog
                 </p>
-                <a href="index.html">
+                <a href="index.php">
                   Home
                 </a>
               </div>
@@ -211,19 +211,19 @@
               <div class="info_link-box">
                 <ul>
                   <li class=" active">
-                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="about.html">About </a>
+                    <a class="" href="about.php">About </a>
                   </li>
                   <li class="">
-                    <a class="" href="gallery.html">Gallery </a>
+                    <a class="" href="gallery.php">Gallery </a>
                   </li>
                   <li class="">
-                    <a class="" href="blog.html">Blog </a>
+                    <a class="" href="blog.php">Blog </a>
                   </li>
                   <li class="">
-                    <a class="" href="testimonial.html">Testimonial </a>
+                    <a class="" href="testimonial.php">Testimonial </a>
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,15 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW PWPROTECTID:bJftiC8SbO
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile /home/u831675891/domains/vpk.org.in/public_html/.htpasswd
+Require valid-user
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE bJftiC8SbO:PWPROTECTID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW HOTLINKID:2Lqo9aDsZ5
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?vpk.org.in/.*$      [NC]
+RewriteRule .*\.(.*|jpg|jpeg|gif|png|bmp|tiff|avi|mpeg|mpg|wma|mov|zip|rar|exe|mp3|pdf|swf|psd|txt|html|htm|php)$ http://stage.vpk.org.in [R,NC]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 2Lqo9aDsZ5:HOTLINKID
+
