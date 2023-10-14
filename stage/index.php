@@ -55,7 +55,7 @@
             </div>
             <a class="navbar-brand" href="index.php">
               <span>
-                Vpk Digital Art ..
+                Vpk Digital Art
               </span>
             </a>
             <div class="user_option">
