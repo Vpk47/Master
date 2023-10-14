@@ -105,8 +105,8 @@
                       Building a Digital World
                     </p>
                     <div>
-                      <a href="requestQuote.php">
-                        Request A Quote
+                      <a href="inquiryForm.php">
+                        Inquire
                       </a>
                     </div>
                   </div>
