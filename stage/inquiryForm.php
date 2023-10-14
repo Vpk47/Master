@@ -135,9 +135,9 @@
                             $email = $_POST["email"];
                             $message = $_POST["message"];
 
-                            $recipient = "your_email@example.com"; // Replace with your email address
+                            $recipient = $email; // Replace with your email address
                             $subject = "New Inquiry from $name";
-                            $headers = "From: automated_email@example.com"; // Replace with your predefined email address
+                            $headers = "From: 47@stage.vpk.org.in"; // Replace with your predefined email address
 
                             // Sample content
                             $sample_content = "Thank you for your inquiry, $name. We will get back to you shortly.";
