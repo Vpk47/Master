@@ -25,39 +25,53 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
-          h2 {
-              text-align: center;
-          }
+      h2 {
+          text-align: center;
+      }
 
-          form {
-              max-width: 400px;
-              margin: 0 auto;
-          }
+      body {
+          font-family: Arial, sans-serif;
+      }
 
-          label {
-              display: block;
-              margin-bottom: 5px;
-          }
+      form {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f7f7f7;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
 
-          input[type="text"],
-          input[type="email"],
-          textarea {
-              width: 100%;
-              padding: 10px;
-              margin-bottom: 15px;
-              border: 1px solid #ccc;
-              border-radius: 3px;
-          }
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
 
-          input[type="submit"] {
-              background-color: #007BFF;
-              color: #fff;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 3px;
-              cursor: pointer;
-          }
-      </style>
+      input[type="text"],
+      input[type="email"],
+      textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+      }
+
+      input[type="submit"] {
+          background-color: #007BFF;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #0056b3;
+      }
+  </style>
+
 </head>
 
 <body class="sub_page">
@@ -114,38 +128,41 @@
           <div class="col-md-5">
             <div class="detail-box">
               <div class="heading_container">
-                    <h2>Request Quote </h2>
-                    <?php
+                    <h2>Inquiry Form</h2>
+                        <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $recipient = "47@stage.vpk.org.in"; // Replace with your email address
-
                             $name = $_POST["name"];
                             $email = $_POST["email"];
                             $message = $_POST["message"];
 
-                            $subject = "New Request from $name";
-                            $headers = "From: $email";
+                            $recipient = "your_email@example.com"; // Replace with your email address
+                            $subject = "New Inquiry from $name";
+                            $headers = "From: automated_email@example.com"; // Replace with your predefined email address
 
-                            $success = mail($recipient, $subject, $message, $headers);
+                            // Sample content
+                            $sample_content = "Thank you for your inquiry, $name. We will get back to you shortly.";
+
+                            // Send the email
+                            $success = mail($recipient, $subject, $sample_content, $headers);
 
                             if ($success) {
-                                echo "Your request has been sent successfully.";
+                                echo "Your inquiry has been sent successfully.";
                             } else {
-                                echo "There was an error sending your request.";
+                                echo "There was an error sending your inquiry.";
                             }
                         } else {
                             echo '
                             <form action="' . $_SERVER['PHP_SELF'] . '" method="post">
                                 <label for="name">Name:</label>
-                                <input type="text" name="name" required>
+                                <input type="text" name="name" required><br><br>
 
                                 <label for="email">Email:</label>
-                                <input type="email" name="email" required>
+                                <input type="email" name="email" required><br><br>
 
-                                <label for="message">Request:</label>
-                                <textarea name="message" rows="4" required></textarea>
+                                <label for="message">Message:</label><br>
+                                <textarea name="message" rows="4" required></textarea><br><br>
 
-                                <input type="submit" value="Submit Request">
+                                <input type="submit" value="Submit Inquiry">
                             </form>
                             ';
                         }
