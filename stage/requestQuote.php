@@ -24,6 +24,40 @@
   <link href=" css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+          h2 {
+              text-align: center;
+          }
+
+          form {
+              max-width: 400px;
+              margin: 0 auto;
+          }
+
+          label {
+              display: block;
+              margin-bottom: 5px;
+          }
+
+          input[type="text"],
+          input[type="email"],
+          textarea {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+          }
+
+          input[type="submit"] {
+              background-color: #007BFF;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 3px;
+              cursor: pointer;
+          }
+      </style>
 </head>
 
 <body class="sub_page">
@@ -80,42 +114,41 @@
           <div class="col-md-5">
             <div class="detail-box">
               <div class="heading_container">
-                    <h2>Request Form</h2>
                     <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $recipient = "47@stage.vpk.org.in"; // Replace with your email address
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $recipient = "47@stage.vpk.org.in"; // Replace with your email address
 
-                        $name = $_POST["name"];
-                        $email = $_POST["email"];
-                        $message = $_POST["message"];
+                            $name = $_POST["name"];
+                            $email = $_POST["email"];
+                            $message = $_POST["message"];
 
-                        $subject = "New Request from $name";
-                        $headers = "From: $email";
+                            $subject = "New Request from $name";
+                            $headers = "From: $email";
 
-                        $success = mail($recipient, $subject, $message, $headers);
+                            $success = mail($recipient, $subject, $message, $headers);
 
-                        if ($success) {
-                            echo "Your request has been sent successfully.";
+                            if ($success) {
+                                echo "Your request has been sent successfully.";
+                            } else {
+                                echo "There was an error sending your request.";
+                            }
                         } else {
-                            echo "There was an error sending your request.";
+                            echo '
+                            <form action="' . $_SERVER['PHP_SELF'] . '" method="post">
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" required>
+
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" required>
+
+                                <label for="message">Request:</label>
+                                <textarea name="message" rows="4" required></textarea>
+
+                                <input type="submit" value="Submit Request">
+                            </form>
+                            ';
                         }
-                    } else {
-                        echo '
-                        <form action="' . $_SERVER['PHP_SELF'] . '" method="post">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name" required><br><br>
-
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" required><br><br>
-
-                            <label for="message">Request:</label><br>
-                            <textarea name="message" rows="4" required></textarea><br><br>
-
-                            <input type="submit" value="Submit Request">
-                        </form>
-                        ';
-                    }
-                    ?>
+                        ?>
               </div>
             </div>
           </div>
